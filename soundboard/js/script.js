@@ -12,6 +12,7 @@
 $("audio").bind("play",function (){
   $("audio").not(this).each(function (index, audio) {
     audio.pause();
+	audio.currentTime = 0;
   });
 });
 
