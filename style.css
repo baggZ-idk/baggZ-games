@@ -1,0 +1,42 @@
+.btn {
+    padding: 10px;
+    color: white;
+    background-color: rgb(215, 25, 25);
+    border-radius: 15px;
+    margin: 2px;
+    border-width: 0px;
+    transition: 0.1s ease-in-out;
+}
+
+.btn:hover {
+    -webkit-box-shadow:0px 0px 31px 0px red;
+    -moz-box-shadow: 0px 0px 31px 0px red;
+    box-shadow: 0px 0px 31px 0px red;
+}
+
+body, html {
+    background-color: rgb(5, 5, 5);
+    font-family: Arial;
+
+}
+
+.stop {
+    color: green;
+}
+
+#title {
+    color: white;
+    font-size: 2vw;
+    font-weight: bolder;
+}
+
+#discord {
+    position: fixed;
+    top: 0px;
+    left: 13.5%;
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+    transition: 0.1s ease-in-out;
+    width: 6vw;
+}
