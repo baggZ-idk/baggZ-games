@@ -1,17 +1,18 @@
 .btn {
     padding: 10px;
     color: white;
-    background-color: rgb(215, 25, 25);
+    background-color: rgb(0, 255, 251);
     border-radius: 15px;
     margin: 2px;
     border-width: 0px;
     transition: 0.1s ease-in-out;
+    cursor: pointer;
 }
 
 .btn:hover {
-    -webkit-box-shadow:0px 0px 31px 0px red;
-    -moz-box-shadow: 0px 0px 31px 0px red;
-    box-shadow: 0px 0px 31px 0px red;
+    -webkit-box-shadow:0px 0px 31px 0px rgb(0, 255, 251);;
+    -moz-box-shadow: 0px 0px 31px 0px rgb(0, 255, 251);;
+    box-shadow: 0px 0px 31px 0px rgb(0, 255, 251);;
 }
 
 body, html {
@@ -20,23 +21,11 @@ body, html {
 
 }
 
-.stop {
-    color: green;
+h1 {
+    color: white;
 }
 
-#title {
-    color: white;
-    font-size: 2vw;
-    font-weight: bolder;
-}
-
-#discord {
-    position: fixed;
-    top: 0px;
-    left: 13.5%;
-    font-size: 20px;
-    color: white;
-    padding: 5px;
-    transition: 0.1s ease-in-out;
-    width: 6vw;
+#rating {
+    margin: 10px;
+    overflow: hidden;
 }
