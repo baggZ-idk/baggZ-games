@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="en-GB">
-
 <head>
     <meta charset="utf-8" />
     <title>baggZ soundboard</title>
@@ -37,9 +35,9 @@
         }
     </style>
 </head>
-
 <body class="no-javascript font-body bg-eggshell">
     <H1>baggZ soundboard</H1>
+    <div id="random-name"></div> <!-- Add this div to display the random name -->
 
     <audio title="stop"></audio>
 
@@ -312,7 +310,6 @@
                             <audio title="limit on talking f-bomb warning">
                                 <source src="audio/limit-on-talking.mp3" />
                             </audio>
-
                             <audio title="chill guy">
                                 <source src="audio/chill-guy.mp3" />
                             </audio>
@@ -322,7 +319,6 @@
                         </div>
                     </section>
                     <iframe id="rating" src="https://gladihoppers-pro.github.io/category/popular.html" width="1500" height="900" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-                 
                     <div class="mt-6"></div>
                 </div>
             </div>
@@ -332,9 +328,39 @@
     <!-- Javascript loveliness. -->
     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // Remove no-javascript class if js is enabled
+            $("body.no-javascript").removeClass("no-javascript");
+
+            $("audio").removeAttr("controls").each(function(i, audioElement) {
+                var audio = $(this);
+                var that = this;
+                $("#doc").append($('<button class="btn '+audio.attr("class")+'" title="'+audio.attr("title")+'">'+audio.attr("title")+'</button>').click(function() {that.play();}));
+            });
+
+            $("audio").bind("play",function (){
+                $("audio").not(this).each(function (index, audio) {
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+            });
+
+            // Random name generator that changes daily
+            function generateRandomName() {
+                const names = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Hannah", "Ivan", "Judy"];
+                const today = new Date().toISOString().slice(0, 10); // Get today's date in YYYY-MM-DD format
+                const randomSeed = new Date(today).getTime(); // Use today's date as the seed
+                const randomIndex = randomSeed % names.length;
+                return names[randomIndex];
+            }
+
+            const dailyName = generateRandomName();
+            console.log("Today's random name is: " + dailyName);
+
+            // Display the name
+            document.getElementById("random-name").innerText = "Today's random name: " + dailyName;
+        });
+    </script>
 </body>
-
 </html>
-```
-
-Would you like me to commit these changes to your repository?
