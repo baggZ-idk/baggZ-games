@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en-GB">
+
 <head>
     <meta charset="utf-8" />
     <title>baggZ soundboard</title>
@@ -35,6 +37,7 @@
         }
     </style>
 </head>
+
 <body class="no-javascript font-body bg-eggshell">
     <H1>baggZ soundboard</H1>
 
@@ -42,8 +45,8 @@
 
     <div class="tab-bar">
         <button onclick="location.href='https://baggz-development-team.github.io/chat/'">Chat</button>
-        <button onclick="location.href='https://forms.gle/5vFGRXXcViJpcUhn7'">GAMES+ (IN EA)</button>
-        <button onclick="location.href='link3.html'">Link 3</button>
+        <button onclick="location.href='https://forms.gle/5vFGRXXcViJpcUhn7'">GAMES+ (BEST UNBLOCKED GAME SITE)</button>
+        <button onclick="location.href='http://DATA.ABATEK.COM'">Pizza edition (may be blocked) </button>
         <button onclick="location.href='link4.html'">Link 4</button>
     </div>
 
@@ -309,11 +312,17 @@
                             <audio title="limit on talking f-bomb warning">
                                 <source src="audio/limit-on-talking.mp3" />
                             </audio>
+
+                            <audio title="chill guy">
+                                <source src="audio/chill-guy.mp3" />
+                            </audio>
+                            <audio title="fortnite death sound">
+                                <source src="audio/tmp_7901-951678082.mp3" />
+                            </audio>
                         </div>
                     </section>
                     <iframe id="rating" src="https://gladihoppers-pro.github.io/category/popular.html" width="1500" height="900" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-                    <iframe id="rating" src="http://38.175.196.247/index.html" width="640" height="750" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-                    <iframe id="rating" src="https://docs.google.com/forms/d/e/1FAIpQLSfW5w6g_yLLFeUwcAQfFRijKbyBc16neO--IzBgepwMBqnGdQ/viewform?usp=sf_link" width="1500" height="900" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+                 
                     <div class="mt-6"></div>
                 </div>
             </div>
@@ -323,39 +332,9 @@
     <!-- Javascript loveliness. -->
     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            // Remove no-javascript class if js is enabled
-            $("body.no-javascript").removeClass("no-javascript");
-
-            $("audio").removeAttr("controls").each(function(i, audioElement) {
-                var audio = $(this);
-                var that = this;
-                $("#doc").append($('<button class="btn '+audio.attr("class")+'" title="'+audio.attr("title")+'">'+audio.attr("title")+'</button>').click(function() {that.play();}));
-            });
-
-            $("audio").bind("play",function (){
-                $("audio").not(this).each(function (index, audio) {
-                    audio.pause();
-                    audio.currentTime = 0;
-                });
-            });
-
-            // Random name generator that changes daily
-            function generateRandomName() {
-                const names = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Hannah", "Ivan", "Judy"];
-                const today = new Date().toISOString().slice(0, 10); // Get today's date in YYYY-MM-DD format
-                const randomSeed = new Date(today).getTime(); // Use today's date as the seed
-                const randomIndex = randomSeed % names.length;
-                return names[randomIndex];
-            }
-
-            const dailyName = generateRandomName();
-            console.log("Today's random name is: " + dailyName);
-
-            // Store the name in a variable
-            var storedName = dailyName;
-        });
-    </script>
 </body>
+
 </html>
+```
+
+Would you like me to commit these changes to your repository?
