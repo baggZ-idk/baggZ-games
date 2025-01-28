@@ -51,9 +51,9 @@
 
     <div class="tab-bar">
         <button onclick="location.href='https://baggz-development-team.github.io/chat/'">Chat(got blocked)</button>
-        <button onclick="location.href='https://forms.gle/5vFGRXXcViJpcUhn7'">Form</button>
-        <button onclick="location.href='http://DATA.ABATEK.COM'">Pizza edition (may be blocked) </button>
-        <button onclick="location.href='link4.html'">Link 4</button>
+        <button onclick="location.href='https://forms.gle/5vFGRXXcViJpcUhn7'">Games+</button>
+    
+
     </div>
 
     <div>
@@ -369,21 +369,7 @@
                 });
             });
 
-            // Random name generator that changes daily
-            function generateRandomName() {
-                const names = ["Lulu", "Blake", "Noah", "Kosta", "Carter", "Mrs. Grice", "", "Bob", "Blake", "Blake"];
-                const today = new Date().toISOString().slice(0, 10); // Get today's date in YYYY-MM-DD format
-                const randomSeed = new Date(today).getTime(); // Use today's date as the seed
-                const randomIndex = randomSeed % names.length;
-                return names[randomIndex];
-            }
-
-            const dailyName = generateRandomName();
-            console.log("Sigma of the day is: " + dailyName);
-
-            // Display the name
-            document.getElementById("random-name").innerText = "Today's random name: " + dailyName;
-        });
+      
     </script>
 </body>
 </html>
