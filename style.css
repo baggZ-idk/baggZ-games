@@ -2,10 +2,9 @@
     padding: 10px;
     color: black;
     background-color: white;
-    border-radius: 15px;
+    border-radius: 5px;
     margin: 2px;
     border-width: 0px;
-    transition: 0.1s ease-in-out;
     cursor: pointer;
 }
 
